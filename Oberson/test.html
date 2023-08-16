@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.5;
+            color: #555;
+            font-family: 'Gotham-Light', 'Lato', sans-serif;
+        }
+
+        .mainContant {
+            width: 1020px;
+            margin: auto;
+        }
+
+        .content {
+            display: flex;
+            margin: auto;
+            /* min-height: 495px; */
+            /* position: relative; */
+            background: rgba(0, 0, 0, 0) url(https://obersonabels.com/sites/default/files/styles/width1020/public/SBE_0.jpg?itok=QbGW8_vL) no-repeat scroll 0 0;
+            background-size: contain;
+            /* gap: 0.5rem; */
+            overflow: hidden;
+
+        }
+        #showInfo{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .avocat_image{
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+    }
+    .open_button{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/profiles-open.png);
+        background-size: cover;
+    }
+    .overlay{
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 104%;
+        background: url(../images/overlay.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center 0;
+        opacity: 0;
+        transition: 0.5s ease-in;
+        z-index: 1;
+    }
+    .avocat_name{
+        color: #d99477;
+        font-size: 14px;
+        height: 57px;
+        line-height: 18px;
+        padding: 9px 15px;
+    }
+    .open img{
+        width: 100%;
+    }
+        .popover {
+            min-width: 1020px;
+            margin: auto;
+            height: auto;
+            border: none;
+        }
+
+        .first,
+        .second {
+            margin-top: 2rem;
+        }
+
+        .first {
+            width: 65%;
+            /* text-align: right; */
+            padding: 1rem;
+        }
+
+        .first h1 {
+            font-size: 26px;
+            line-height: 30px;
+            text-align: right;
+            text-transform: uppercase;
+            margin: 0;
+            color: #d99477;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            padding-top: 2rem;
+            text-align: right;
+            align-items: flex-end;
+        }
+
+        .links a {
+            color: #d99477;
+            width: fit-content;
+            font-size: 14px;
+            text-decoration: underline !important;
+            text-transform: uppercase;
+            padding-top: 2px;
+        }
+
+        .second {
+            top: 0%;
+            width: 35%;
+            left: 5%;
+            /* position: relative; */
+            top: 0;
+            padding: 1rem;
+            text-align: left;
+           
+        }
+        .third{
+            height: 390px;
+            overflow: hidden;
+        }
+
+        .second h3 {
+            font-family: Gotham-Medium;
+            font-size: 11px;
+            line-height: 14px;
+            margin: 0;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .second p {
+            font-size: 13px;
+            line-height: 17px;
+            margin: 0;
+            color: #696c71;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background: url(https://obersonabels.com/sites/all/themes/obersonabels/img/icon-showmore2.png) no-repeat;
+            background-position: -12px 50%;
+            color: #d99477;
+            cursor: pointer;
+            /* margin-bottom: 0 !important; */
+            padding-right: 0px;
+            text-decoration: underline;
+            height: 53px;
+            width: 53px;
+        }
+
+        .button-showLess {
+            background: url(https://obersonabels.com/sites/all/themes/obersonabels/img/scroll_to_top.png) no-repeat;
+            background-position: 0% 50%;
+            background-size: 50%;
+            color: #d99477;
+            cursor: pointer;
+            margin-bottom: 0 !important;
+            padding-right: 0px;
+            text-decoration: underline;
+            height: 53px;
+            width: 53px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainContant" id="mainContant">
+        <div class="bs-example">
+            <button type="button" class="btn btn-primary btn-lg" id="myPopover" data-bs-placement="bottom"
+                data-toggle="popover">Click to toggle popover</button> --></div>
+            <div class="content" id="content">
+                <div class="first">
+                    <h1>SÉBASTIEN <br>BETTSCHART</h1>
+                    <div class="links">
+                        <a href="#">EMAIL</a>
+                        <a href="#">VCARD</a>
+                        <a href="#">ORGANISATION</a>
+                        <a href="#">PDF</a>
+                        <a href="#">SHARE</a>
+                        <a href="#">PUBLICATIONS</a>
+                        <a href="#">CONFÉRENCES</a>
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="third" id="hidden">
+                        <h3>PARCOURS PROFESSIONNEL</h3>
+                        <p>OBERSON ABELS SA, Genève et Lausanne, associé
+                            ABELS Avocats, Genève, associé (2009-2016)
+                            Tavernier Tschanz, Genève, associé (2007-2009)
+                            Tavernier Tschanz, Genève, collaborateur (2001-2004; 2005-2006)
+                            Tavernier Tschanz, Genève, avocat-stagiaire (1999-2001)</p>
+                        <h3>FORMATIONS</h3>
+                        <p>New York University School of Law (LL.M., 2005)
+                            Brevet d’avocat, Genève (2001, 1er brevet)
+                            Université de Lausanne (doctorat en droit, 2000. Prix Walther Hug ; Prix de la BCV pour les
+                            sciences sociales)
+                            Université de Lausanne (licence en droit, 1995)
+                            Université de St-Gall (programme d'échange national ; 1994-1995)</p>
+                        <h3>AUTRES ACTIVITÉS</h3>
+                        <p>Professeur titulaire en droit commercial, Université de Fribourg
+                            Chargé de cours en droit commercial, Ecole d'avocature (ECAV) – Université de Genève
+                            Assistant-étudiant puis assistant, CEDIDAC – Centre du droit de l'entreprise de l'Université
+                            de Lausanne
+                            (1994-1998)</p>
+                        <h3>LANGUES</h3>
+                        <p>Français, Anglais, Allemand</p>
+                        <h3>ADMISSION</h3>
+                        <p>Admis en Suisse</p>
+                        <h3>DOMAINES</h3>
+                        <p>M&A<br>
+                            Private Equity<br>
+                            Droit commercial<br>
+                            Droit des contrats<br>
+                            Assainissement</p>
+                    </div>
+                    <div class="button" id="showBtn"></div>
+                    <div class="button-showLess" id="showLessBtn"></div>
+                </div>
+            </div>
+        </div>
+
+     
+            <div id="demo"></div>
+
+           
+        <div id="showInfo"></div>
+
+
+
+        <script>
+            //         timer();
+
+            // function timer(){
+             var currentTime = new Date()
+            var hours = currentTime.getHours()
+            // var minutes = currentTime.getMinutes()
+            // var sec = currentTime.getSeconds()
+            // if (minutes < 10){
+            //     minutes = "0" + minutes
+            // }
+            // if (sec < 10){
+            //     sec = "0" + sec
+            // }
+            // var t_str = hours + ":" + minutes + ":" + sec + " ";
+            // if(hours > 11){
+            //     t_str += "PM";
+            // } else {
+            //    t_str += "AM";
+            // }
+            //  document.getElementById('time_span').innerHTML = t_str;
+            //  setTimeout(timer,1000);
+            // }
+            // console.log(Date.prototype.toDateString())
+            console.log(currentTime.toString());
+            const btn = document.getElementById('showBtn');
+            const lessBtn = document.getElementById('showLessBtn');
+            lessBtn.style.display='none'
+            const hidden = document.getElementById('hidden');
+            btn.addEventListener('click', function () { showfun() })
+            lessBtn.addEventListener('click', function () { lessFun() })
+
+            const showfun = function () {
+                hidden.style.height = "auto";
+                console.log('hello');
+                btn.style.display = 'none'
+                lessBtn.style.display = 'block'
+            };
+            const lessFun = function () {
+                hidden.style.height = "390px";
+                console.log('hello');
+                btn.style.display = 'block'
+                lessBtn.style.display = 'none'
+            }
+
+
+
+            // const test = document.getElementById('test');
+            const cars = ['bmw', 'mercedes', 'audi', 'lirim'];
+            const mobiles = ['iphone', 'samsung', 'nokia'];
+            // const ages = [32, 132, 23, 43213, 65, 13, 23, 44];
+            // const last =ages.sort(function(a,b){return a-b})
+            // console.log(ages[ages.length-1]);
+            // console.log(last);
+            // function findName(name){
+            //   return cars.name =="bmw"
+            // }
+            // console.log(cars.find(findName));
+
+            // let result =Array.isArray(test);
+            // console.log(result);
+            // function checkAge(age) {
+            //     return age = document.getElementById("ageToCheck").value;
+            //     console.log(age);
+            // }
+
+            // function myFunction() {
+            //     document.getElementById("demo").innerHTML = ages.filter(checkAge);
+            // }
+            const companies = [
+                { name: "Company One", category: "Finance", start: 1981, end: 2004 },
+                { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
+                { name: "Company Three", category: "Auto", start: 1999, end: 2007 },
+                { name: "Company Four", category: "Retail", start: 1989, end: 2010 },
+                { name: "Company Five", category: "Technology", start: 2009, end: 2014 },
+                { name: "Company Six", category: "Finance", start: 1987, end: 2010 },
+                { name: "Company Seven", category: "Auto", start: 1986, end: 1996 },
+                { name: "Company Eight", category: "Technology", start: 2011, end: 2016 },
+                { name: "Company Nine", category: "Retail", start: 1981, end: 1989 }
+            ];
+
+            const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+
+            const forEachLoop = companies.forEach(company => {
+                console.log(`${company.name} ${company.start}`)
+            })
+
+            const filtered = ages.filter(age => age > 14)
+            console.log(ages)
+            console.log(filtered)
+
+
+            const eights = companies.filter(company => {
+                if (company.start >= 1980 && company.start < 1990)
+                    return 1
+            });
+            console.log(eights);
+
+            // const eightiesCompanies = companies.filter(company => (company.start >= 1980 && company.start < 1990));
+            // console.log(eightiesCompanies)
+
+            const last = companies.filter(company => (company.end - company.start <= 10))
+            console.log(last)
+
+
+            // const mapp = companies.map(function(company){
+            //     return `${company.name} ${company.start}`
+            // })
+            // console.log(mapp.join(" , "))
+            const mapp = companies.map(company => `${company.name} ${company.start}`);
+            console.log(mapp.join(","));
+
+            // const sortedCompanies = companies.sort(function(a , b){
+            //     if(a.start< b.start){
+            //         return 1
+            //     }
+            //     else{
+            //         return -1
+            //     }
+            // })
+            // console.log(sortedCompanies);
+
+            console.log(companies)
+
+            // const sort2 = companies.sort((a, b)=>(a.start<b.start)? 1 : -1 );
+            // console.log(sort2);
+
+
+
+            console.log(ages);
+            console.log(ages[ages.length - 1]);
+
+            ages.unshift(30);
+            ages.shift();
+            // console.log(ages)
+            // ages.pop();
+            // console.log(ages)
+            const finder = ages.find(age => age > 40);
+            console.log(finder);
+            console.log(ages)
+
+            const fruits = ["Banana", "Orange", "Apple", "Mango", "Pear", "Grape"];
+
+            // Array.prototype.myUcase = function() {
+            //   for (let i = 0; i < this.length; i++) {
+            //     this[i] = this[i].toUpperCase();
+            //   }
+            // };
+            // fruits.myUcase();
+            console.log(fruits);
+
+            const slicedARR = fruits.slice();
+            console.log(slicedARR);
+
+            const slicedArr2 = fruits.slice(0, 4);
+            console.log(slicedArr2.join(" , "));
+
+            function checkAdult(age) {
+                return age >= 18;
+                console.log(age);
+            }
+            const someArr = ages.some(checkAdult);
+            console.log(someArr);
+            const splicedArr = fruits.splice(2, 0, "hello");
+            console.log(fruits.toString());
+            console.log(typeof (companies));
+
+
+            newAges = ages.map(x => x * 2);
+            console.log(newAges.join("    "));
+            const hello = ages.sort(function (a, b) { return a - b });
+            console.log(hello);
+            const hello2 = ages.sort((a, b) => a - b);
+            console.log(hello2);
+
+            const showInfo = document.getElementById('showInfo');
+
+            const employess =[
+                {
+                    name:'ANTOINE AMIGUET',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/0.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Antoine Amiguet</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                    <div class="avocat_image">
+                        <div class="open">
+                            <img src="images/1.jpg" alt="avocat image">
+                            <div class = "open_button"></div>
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'Sébastien Bettschart',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/2.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sébastien Bettschart</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'Antoine Biedermann',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/3.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Antoine Biedermann</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'Monika Boesch',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/4.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Monika Boesch</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'Alexandre Borgeaud',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/5.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Alexandre Borgeaud</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'Nicolas Buchel',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/6.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Nicolas Buchel</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'Nathalie Buck',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/7.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Nathalie Buck</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'Gaëlle Constantin',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/8.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Gaëlle Constantin</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/9.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/10.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/11.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/12.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/13.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/14.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/15.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/16.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/17.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/18.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/19.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+                {
+                    name:'SOFIA BASSOVA',
+                    info:`
+                    <div class="avocat_profile">
+                        <div class="avocat_image">
+                            <div class="open">
+                                <img src="images/20.jpg" alt="avocat image">
+                                <div class = "open_button"></div>
+                                <div class="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="avocat_name">Sofia Bassova</div>
+                    </div>
+                    `
+                },
+            ]
+            for(let i = 0;i<=5;i++){
+                showInfo.innerHTML += employess[i].info;
+            }
+
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>

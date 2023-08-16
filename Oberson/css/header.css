@@ -1,0 +1,633 @@
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../fonts/Gotham-Medium.eot');
+    src: local('☺'), url('../fonts/Gotham-Medium.woff') format('woff'), url('../fonts/Gotham-Medium.ttf') format('truetype'), url('../fonts/Gotham-Medium.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham-Book.eot');
+    src: local('☺'), url('../fonts/Gotham-Book.woff') format('woff'), url('../fonts/Gotham-Book.ttf') format('truetype'), url('../fonts/Gotham-Book.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/Gotham-Bold.eot');
+    src: local('☺'), url('../fonts/Gotham-Bold.woff') format('woff'), url('../fonts/Gotham-Bold.ttf') format('truetype'), url('../fonts/Gotham-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('../fonts/Gotham-Light.eot');
+    src: local('☺'), url('../fonts/Gotham-Light.woff') format('woff'), url('../fonts/Gotham-Light.ttf') format('truetype'), url('../fonts/Gotham-Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham-Light', 'Lato', sans-serif;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    color: #555;
+}
+*::selection{
+    color: white;
+    background-color: #d99477;
+    text-shadow: none;
+}
+#header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+.headerImage{
+   position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center 0;
+    left: 0;
+    bottom: 0;
+}
+#secondLogo{
+    height: 2.813rem;
+    position: fixed; 
+    left: 12%;
+    top: 55px;
+    z-index: 11;
+    opacity: 0;
+}
+.headerLogo{
+    position: absolute;
+    top: 34%;
+    width: 12.5rem;
+    z-index: 1;
+}
+#menu{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0 ,0.3);
+}
+.firstUL {
+    display: flex ;
+    width: 1020px;
+    list-style: none;
+    margin: auto;
+    justify-content: flex-start;
+    z-index: 3;
+}
+#language{
+    position: relative;
+    list-style-type: none;
+    width: 2.5rem;
+    margin-left: -3.5rem;
+    color:#D99477;
+    border: none;
+    background: transparent;
+    font-size:0.813rem;
+    font-weight: bold;
+    display: block;
+    letter-spacing: 1px;
+    padding: 5px 0 2px;
+    margin-right: 1rem;
+    z-index: 5;
+    user-select: none;
+}
+#language li a{
+    text-decoration: none;
+    color: #D99477;
+    font-family: "Gotham-Book",sans-serif;
+    text-transform: uppercase;
+    font-size: 0.813rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.375rem;
+    padding: 5px 0 2px;
+}
+#activeLang{
+    background-size: 0.5rem;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 3px;
+    cursor: pointer;
+    width: 42.5px;
+    transform: translateY(-2px);
+}
+#activeLang a{
+    pointer-events: none;
+}
+#disabledLang{
+    position: absolute;
+    top: 2rem;
+}
+#menu .realMenu{
+    width: 100%;
+    list-style: none;
+    flex-wrap: wrap;
+}
+#menu .fa-bars{
+    display: none;
+    cursor: pointer;
+}
+
+#menu .realMenu li :hover{
+    color:#D99477 ;
+}
+
+.sticky #menu {
+    background-color: rgba(37, 27, 24);
+}
+#menu .realMenu li{
+    padding-left: 2px;
+}
+#menu .realMenu li:first-child{
+    padding-left: 0%;
+}
+#menu .realMenu  li a{
+    text-decoration: none !important;
+    font-family: "Gotham-Book",sans-serif;
+    text-transform: uppercase;
+    font-size: 0.813rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.375rem;
+    color: #e6e6e6;
+    display: block;
+    padding: 5px 0 2px;
+    margin-right: 1.563rem;
+    width: max-content;
+}
+#menu ul li .active{
+    color:#D99477;
+}
+#downArrow{
+    position: absolute;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    bottom: 1.25rem;
+    z-index: 3;
+    cursor: default;
+    text-decoration: none;
+    transform: translateX(-50%);
+    text-align: center;
+}
+#downArrow .fa{
+    color: #9a7769;
+    font-size: 2rem;
+    cursor: default;
+    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+}
+@keyframes bounce{
+    100%{
+
+        transform: translateY(0);
+    }
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+.gradientContainer{
+    width: 1170px;
+    margin: auto;
+    position: relative;
+    height: 100%;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+#gradientText{
+    position: absolute;
+    left: 75px;
+    width: 649px;
+    max-width: 649px;
+    min-height: 135px;
+    min-width: 470px;
+    height: auto !important;
+}
+#gotoTop{
+    position: relative;
+    width: 1170px;
+    margin: auto;
+    padding: 0 75px 1.875rem 75px;
+    border-radius: 2px;
+    line-height: 2.25rem;
+    text-align: left;
+    color: #FFF;
+}
+#gotoTop::after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 2.3rem;
+    background-color: #d99477;
+    left: 75px;
+    bottom: 0;
+}
+.topButton{
+    background: url(../images/top.png);
+    width: 2.25rem;
+    height: 2.25rem;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*  body-main content css   */
+
+.mainContent{
+    padding: 0rem 75px ;
+    width: 1170px;
+    margin: auto;
+}
+.contentWrap{
+    padding:5rem 0rem
+}
+
+/* Footer  css - start*/
+
+.footer{
+    font-size: 0.938rem;
+    line-height: 1.25rem;
+    color: #555;
+    font-family: 'Gotham-Light', 'Lato', sans-serif;
+    background-color: #fff;
+    border-top: 1px solid #d99477;
+    padding-top: 50px;
+}
+.footerContent{
+    position: relative;
+    display: flex;
+    width: 1170px;
+    padding: 0 75px 4rem 75px;
+    margin: auto;
+    justify-content: space-between;
+}
+.footer strong{
+    font-weight: bold;
+    font-family: 'Gotham-Book', sans-serif;
+    line-height: 20px;
+}
+.adresat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.adresa{
+    font-size: 15px;
+    line-height: 20px;
+}
+.socialMedia{
+    position: absolute;
+    right: 75px;
+    top: 0;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.social{
+    text-align: right;
+}
+.social a{
+    margin-left: 6px;
+}
+.social a img{
+    max-width: 1.875rem;
+    max-height: 1.438rem;
+    height: 2rem;
+}
+#privacy-link{
+    text-decoration: none !important;
+    color: #d99477;
+    text-align: right;
+    line-height: 20px;
+    margin-top: 4px;
+}
+
+@media (max-width:479px){
+    .headerImage{
+        position: absolute;
+        background-position: 80% 0%;
+    }
+    .gradientContainer{
+        width: 100%;
+        padding: 0px 20px;
+    }
+    #gradientText{
+        width: 90%;
+        min-width: auto;
+        max-width: 90%;
+        height: auto;
+        min-height: auto;
+        left: 20px;
+        top: 70%;
+    }
+    .headerLogo{
+        width: 110px;
+        top: 21px;
+        left: 20px;
+    }
+    #downArrow{
+        display: none;
+    }
+    #menu{
+        width: 100%;
+        top: 12px;
+        right: 25px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    .firstUL {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    #menu .fa-bars{
+        padding-top: 5px;
+        padding-left: 7px;
+        display: block;
+        color: #d99477;
+        font-size: 26px;
+    }
+    #menu .realMenu{
+        position: absolute;
+        right: 12%;
+        display: none ;
+        width:75%;
+        background-color: rgba(0,0,0,0.85);
+        z-index: 23;
+    }
+    #menu .realMenu li a{
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+    }
+    #menu ul li a{
+        margin: 0;
+        padding: 8px 4px; 
+    }
+    #menu .realMenu li{
+        padding: 8px 25px !important;
+        border-top: 1px solid #d99477;;
+    }
+    .mainContent{
+        margin: auto;
+        padding: 0rem 20px;
+        width: 100%;
+    }
+    .footerContent{
+        width: 100%;
+        padding: 0 20px 0.2rem 20px;
+    }
+    .adresa{
+        line-height: 20px;
+    }
+    .adresat{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .socialMedia{
+        top: -110px;
+        right: 20px;        
+    }
+    #gotoTop{
+        display: none;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px){
+    .headerImage{
+        position: absolute;
+        background-position: 80% 0%;
+    }
+    .gradientContainer{
+        width: 100%;
+        padding: 0px 25px;
+    }
+    #gradientText{
+        width: 500px;
+        min-width: auto;
+        max-width: 90%;
+        height: auto;
+        left: 25px;
+        top: 70%;
+    }
+    .headerLogo{
+        width: 160px;
+        top: 21px;
+        left: 25px;
+    }
+    #secondLogo{
+        display: none;
+    }
+    #downArrow{
+        display: none;
+    }
+    #menu{
+        width: 100%;
+        top: 12px;
+        right: 30px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    #menu .dropdown-item{
+        padding: 2px;
+    }
+    .firstUL{
+        width: 100%;
+        justify-content: flex-end;
+    }
+    #menu .fa-bars{
+        padding-top: 5px;
+        padding-left: 7px;
+        display: block;
+        color: #d99477;
+        font-size: 26px;
+    }
+    #menu .realMenu{
+        position: absolute;
+        right: 12%;
+        display: none ;
+        width:65%;
+        background-color: rgba(0,0,0,0.85);
+        z-index: 23;
+    }
+    #menu .realMenu li{
+        padding: 8px 25px !important;
+        border-top: 1px solid #d99477;;
+    }
+    #menu .realMenu li a{
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+    }
+    #menu ul li a{
+        margin: 0;
+        padding: 8px 4px; 
+    }
+    .mainContent{
+        margin: auto;
+        padding: 0rem 25px;
+        width: 100%;
+    } 
+    .footerContent{
+        width: 100%;
+        padding: 0 20px 0.2rem 25px;
+    }
+    .adresa{
+        line-height: 20px;
+    }
+    .adresat{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .socialMedia{
+        top: -110px;
+        right: 25px;
+    }
+    #gotoTop{
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 990px){
+    .headerImage{
+        position: absolute;
+        background-position: 80% 0%;
+    }
+    .gradientContainer{
+        width: 100%;
+        padding: 0px 30px;
+    }
+    #gradientText{ 
+        width: 740px;
+        min-width: auto;
+        height: 228px;
+        max-width: 90%;
+        left: 30px;
+        bottom: 10px;
+    }
+    .headerLogo{
+        width: 160px;
+        top: 21px;
+        left: 25px;
+    }
+    #secondLogo{
+        display: none;
+    }
+    #menu{
+        width: 100%;
+        top: 12px;
+        right: 35px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    #menu .dropdown-item{
+        padding: 2px;
+    }
+    .firstUL{
+        width: 100%;
+        justify-content: flex-end;
+    }
+    #menu .fa-bars{
+        padding-top: 5px;
+        padding-left: 7px;
+        display: block;
+        color: #d99477;
+        font-size: 26px;
+    }
+    #menu .realMenu{
+        position: absolute;
+        right: 20%;
+        display: none ;
+        width:50%;
+        background-color: rgba(0,0,0,0.85);
+        z-index: 23;
+        margin: auto;
+    }
+    #menu .realMenu li{
+        padding: 8px 25px !important;
+        border-top: 1px solid #d99477;;
+    }
+    #menu .realMenu li a{
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+    }
+    #menu ul li a{
+        margin: 0;
+        padding: 8px 4px; 
+    }
+    .mainContent{
+        margin: auto;
+        padding: 0rem 30px;
+        width: 100%;
+    }
+    .footerContent{
+        width: 100%;
+        padding: 0 30px 1rem 30px;
+        align-items: flex-end;
+    }
+    .socialMedia{
+        top: auto;
+        bottom: 5px;
+        right: 30px;
+    }
+    .adresat{
+        padding-bottom: 3rem;
+    }
+    #gotoTop{
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #gotoTop::after{
+        left: 30px;
+    }
+    #downArrow{
+        bottom: 0;
+    }
+}
+@media (min-width: 991px) and (max-width: 1200px){
+    #secondLogo{
+        left: 2%;
+        height: 2.5rem
+    }
+    .headerImage{
+        background-position: center;
+    }
+    .gradientContainer{
+        width: 970px;
+        padding: 0px 75px;
+    }
+    .firstUL {
+        width: 970px;
+        padding: 0px 75px;
+    }
+    .mainContent{
+        margin: auto;
+        padding: 0rem 75px;
+        width: 970px;
+    }
+    #gotoTop{
+        width: 970px;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    .footerContent{
+        width: 970px;
+        padding: 0 75px 1.5rem 75px;
+    }
+}
+@media (min-width:1200px ) and (max-width:1550px){
+    #secondLogo{
+        left: 2%;
+    }
+}

@@ -1,0 +1,74 @@
+.contentWrap{
+    min-height: 750px;
+}
+.mainContent h3{
+    font-family: 'Gotham-Book', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 10px 0;
+    text-transform: uppercase;
+    line-height: 1.875rem;
+    color: #d99477;
+}
+.mainContent p{
+    color: #696c71;
+    font-size: 18px;
+    line-height: 32px;
+}
+.border{
+    border-top: 1px solid #696c71;
+    border-bottom: 1px solid #696c71;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+.mainContent a{
+    font-size: 1.125rem;
+    background: transparent;
+    text-decoration: none ;
+    color: #d99477;
+}
+.mainContent a:hover{
+    color: black;
+}
+.jobsBorder{
+    padding: 1.25rem 2.813rem 2.5rem 0rem;
+    border-top: 1px solid #696c71;
+    border-bottom: 1px solid #696c71;
+}
+@media (max-width: 479px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(7){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+}
+@media(min-width: 480px) and (max-width: 767px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(7){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 990px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(7){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+    #menu .realMenu li a{
+        height: 2rem;
+        line-height: 2rem;
+    }
+}

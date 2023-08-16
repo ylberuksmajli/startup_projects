@@ -1,0 +1,33 @@
+.author{
+    display: flex;
+    padding-top: 3rem;
+}
+.author_img{
+    height: 9.375rem;
+    aspect-ratio: 1;
+}
+.author_img img{
+    width: 100%;
+}
+.name{
+    font-family: Gotham-Book;
+    position: relative;
+    color: #d99477;
+    font-size: 1.563rem;
+    font-weight: bold;
+    line-height: 1.125rem;
+    margin-left: 1rem;
+    text-transform: uppercase;
+}
+.name::after{
+    position: absolute;
+    content: "";
+    width: 1.875rem;
+    height: 4px;
+    background-color: #d99477;
+    left: 0;
+    bottom: 0px;
+}
+.dropList ul li:nth-child(29) {
+    color: black;
+}

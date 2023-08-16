@@ -1,0 +1,173 @@
+.hover{
+    margin-top: 3rem;
+}
+.hover a{
+    text-decoration: none;
+}
+.hover div{
+    border-top: 1px solid #696c71;
+    padding:1.25rem 2.813rem 1.25rem 0rem;
+    background-image: url(../images/list-closed.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.hover a:last-child div{
+    border-bottom: 1px solid #696c71;
+}
+/* pagination added */
+.pagination{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.pagination ul{
+    list-style: none;
+    text-align: center;
+}
+.pagination a{
+    text-decoration: none;
+    font-size: 0.875rem;
+    padding: 5px 14px;
+    display: inline-block;
+    border-radius: 15px;
+    line-height: 1.5;
+}
+.pager_current{
+    color:#696c71;
+    cursor: default;
+    pointer-events: none;
+}
+.pager_previous, .pager_next{
+    color: #d99477;
+}
+.pager_previous:hover,
+.pager_next:hover{
+    color: #696c71;
+}
+
+/* pagination added */
+.hover div h3{
+    color: #696c71;
+    font-family: Gotham-Book;
+    font-size: 1rem;
+}
+.hover div p{
+    font-size: 0.875rem;
+    color: #555;
+}
+.hover div:hover h3{
+    text-decoration: underline;
+    color: #B56B4E;
+}
+.hover div:hover p{
+    color: #B56B4E;
+}
+.hover div:hover{
+    background-image: url(../images/list-open.png);
+    border-top: 1px solid #B56B4E;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.dropdown{
+    width: 15rem;
+}
+.dropdown .dropListShow{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B56B4E;
+    cursor: pointer;
+    background: url(../images/filter-closed.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.dropButton{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B56B4E;
+    cursor: pointer;
+    background: url(../images/filter-open.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-decoration: none;
+}
+.dropButton span{
+    transform: translateY(-40%);
+    color: #d99477;
+    font-size: 1.313rem;
+}
+.dropList{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ;
+}
+.dropList ul{
+    padding-top: 5px;
+    padding-left: 2px;
+    list-style-type: circle;
+    list-style-position: inside;
+}
+.dropList ul li:first-child{
+    color: black;
+}
+.dropList ul li {
+    color: #d99477;
+    font-size: 13px;
+}
+.dropList ul li a{
+    font-family: Gotham-Book;
+    text-decoration: none;
+    color: inherit;
+    line-height: 3px;
+    letter-spacing: 0;
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+
+@media (max-width:479px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(3){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px){
+    
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(3){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 990px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(3){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+    #menu .realMenu li a{
+        height: 2rem;
+        line-height: 2rem;
+    }
+}

@@ -1,0 +1,287 @@
+.containerWrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.layer{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(-90deg, transparent, rgba(38, 28, 24, 0.9) 100%);
+    pointer-events: none;
+}
+
+#overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: url(../images/close.png)15 15, auto;
+    z-index: -1;
+}
+
+/* sidepanels -- offcanvas */
+.side-Panel{
+    position: fixed;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(1, 1, 1, 0.2);
+    color: #fff;
+    transition: left 0.4s ease;
+    z-index: 999;
+}
+.side-Panel-Wrap{
+    width: 100%;
+    padding: 50px 49px 50px 40px;
+    height: 100%;
+    overflow: auto;
+}
+.side-Panel-Content{
+    color: #feb99c;
+    width: 220px;
+    margin: 0;
+}
+.side-Panel-Info{
+    color: white;
+    width: 220px;
+    margin: 0;
+}
+.side-Panel-Content h4,.side-Panel-Info h4{
+    font-weight: 700;
+    line-height: 1.5;
+    font-family: 'Gotham-Book', sans-serif;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    color: inherit;
+}
+.side-Panel-Content p,.side-Panel-Info p{
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: inherit;
+}
+.side-Panel-Content p a{
+    font-family: 'Gotham-Bold';
+    background: transparent;
+    text-decoration: none;
+    color: #d99477;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.side-Panel-Content p a:hover{
+    color: #feb99c;
+}
+
+
+
+#map{
+    width: 100%;
+    height: 100vh;
+}
+#map img{
+    z-index: 999999;
+    position: absolute;
+}
+#menu{
+    pointer-events: all;
+}
+.contactFooter{
+    display: none;
+    position: relative;
+    padding-bottom: 5rem;
+}
+.contactLinks{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    display: none;
+    flex-direction: column;
+}
+.social{
+    margin-bottom: 0.313rem;
+    text-align: right;
+}
+
+@media (max-width:479px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(8){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+    .layer{
+        background-image: none;
+    }
+    .contactFooter{
+        display: block;
+        width: 100%;
+        padding: 30px 20px;
+        border-top: 1px solid #d99477;
+        position: relative;
+        font-size: 15px;
+        line-height: 20px;
+         background-color: #fff;
+    }
+   
+    .side-Panel-Content1 h4,.side-Panel-Info1 h4{
+        font-weight: 700;
+        line-height: 1.5;
+        font-family: 'Gotham-Book', sans-serif;
+        font-size: 16px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        color: inherit;
+    }
+    .side-Panel-Content1 p,.side-Panel-Info1 p{
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 30px;
+        color: #555;
+        font-family: 'Gotham-Light', 'Lato', sans-serif;
+    }
+    .side-Panel-Content1 p a{
+        font-family: 'Gotham-Light', 'Lato', sans-serif;
+        background: transparent;
+        text-decoration: none;
+        color: #d99477;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .side-Panel-Content1 p a:hover{
+        color:  black;
+    }
+    .contactLinks{
+        display: flex;
+        right: 30px;
+        top: -75px;
+        z-index: 999;
+    }
+
+}
+@media (min-width: 480px) and (max-width: 767px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(8){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+    .layer{
+        background-image: none;
+    }
+    .contactFooter{
+        display: block;
+        width: 100%;
+        padding: 30px 25px;
+        border-top: 1px solid #d99477;
+        position: relative;
+        font-size: 15px;
+        line-height: 20px;
+         background-color: #fff;
+    }
+   
+    .side-Panel-Content1 h4,.side-Panel-Info1 h4{
+        font-weight: 700;
+        line-height: 1.5;
+        font-family: 'Gotham-Book', sans-serif;
+        font-size: 16px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        color: inherit;
+    }
+    .side-Panel-Content1 p,.side-Panel-Info1 p{
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 30px;
+        color: #555;
+        font-family: 'Gotham-Light', 'Lato', sans-serif;
+    }
+    .side-Panel-Content1 p a{
+        font-family: 'Gotham-Light', 'Lato', sans-serif;
+        background: transparent;
+        text-decoration: none;
+        color: #d99477;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .side-Panel-Content1 p a:hover{
+        color:  black;
+    }
+    .contactLinks{
+        display: flex;
+        right: 30px;
+        top: -75px;
+        z-index: 999;
+    }
+}
+@media (min-width: 768px) and (max-width: 990px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(8){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+    .layer{
+        background-image: none;
+    }
+    .contactFooter{
+        display: block;
+        width: 100%;
+        padding: 30px 30px;
+        border-top: 1px solid #d99477;
+        position: relative;
+        font-size: 15px;
+        line-height: 20px;
+         background-color: #fff;
+    }
+    .side-Panel-Content1 h4,.side-Panel-Info1 h4{
+        font-weight: 700;
+        line-height: 1.5;
+        font-family: 'Gotham-Book', sans-serif;
+        font-size: 14px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        color: inherit;
+    }
+    .side-Panel-Content1 p,.side-Panel-Info1 p{
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 30px;
+        color: #555;
+        font-family: 'Gotham-Light', 'Lato', sans-serif;
+    }
+    .side-Panel-Content1 p a{
+        font-family: 'Gotham-Light', 'Lato', sans-serif;
+        background: transparent;
+        text-decoration: none;
+        color: #d99477;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .side-Panel-Content1 p a:hover{
+        color:  black;
+    }
+    .contactLinks{
+        display: flex;
+        right: 30px;
+        bottom: 5px;
+        z-index: 999;
+    }
+}

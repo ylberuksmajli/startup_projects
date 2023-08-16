@@ -1,0 +1,64 @@
+.mainContent h2{
+    position: relative;
+    font-family: 'Gotham-Book', sans-serif;
+    border-bottom: 1px solid;
+    font-size: 1.875rem;
+    line-height: 2rem;
+    margin-bottom: 1.875rem;
+    margin-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #d99477;
+}
+.mainContent h2::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 2rem;
+    background-color: #d99477;
+    bottom: 0;
+    left:0;
+} 
+.mainContent h3{
+    font-size: 1.125rem;
+    font-family: 'Gotham-Book', sans-serif;
+    margin: 0.625rem 0;
+    text-transform: uppercase;
+    line-height: 1.875rem;
+    font-weight: 600;
+    color: #d99477;
+}
+.mainContent p{
+    color: #696c71;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-bottom: 1.875rem;
+}
+@media (max-width:479px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 990px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+}

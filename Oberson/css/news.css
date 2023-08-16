@@ -1,0 +1,181 @@
+.mainContent{
+    display: flex;
+    flex-direction: column;
+}
+.newsPadding{
+    padding: 0 75px;
+    margin-right: -75px;
+}
+.section{
+    display: flex;
+    flex-direction: row;
+    padding: 1.875rem 0rem;
+    border-top: 1px solid #b06b4e;
+}
+.section .image{
+    min-width: 9.375rem;
+    height: auto;
+    padding-right: 30px;
+}
+.info{
+    padding-left: 1.25rem;
+}
+.info p , .info span{
+    color: #696c71;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-bottom: 1.875rem;
+}
+.info h2{
+    font-family: Gotham-Book;
+    color: #d99477;
+    font-size: 1.125rem;
+    margin-top: 0.625rem;
+    text-transform: uppercase;
+    margin-bottom: 0.625rem;
+    line-height: 1.875rem;
+    font-weight: 600;
+}
+.info a{
+    text-decoration: none;
+    color: #d99477;
+}
+.info a:hover{
+    color: black;
+}
+.mainContent h1{
+    font-family: 'Gotham-Book', sans-serif;
+    color: #d99477;
+    border-top: 1px solid #b06b4e;
+    border-bottom: 1px solid #b06b4e;
+    font-size: 1.875rem;
+    line-height: 2rem;
+    margin-bottom: 1.875rem;
+    padding: 1.25rem 0rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.pagination{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    background-image: none;
+}
+.pagination ul{
+    list-style: none;
+    text-align: center;
+}
+.pagination a{
+    text-decoration: none;
+    font-size: 1.125rem;
+    padding: 5px 14px;
+    display: inline-block;
+    border-radius: 15px;
+    line-height: 2rem;
+}
+.pager_current{
+    color:#696c71;
+    cursor: default;
+    pointer-events: none;
+}
+.pager_previous, .pager_next{
+    color: #d99477;
+}
+.pager_previous:hover,
+.pager_next:hover{
+    color: #696c71;
+}
+@media (max-width: 479px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(5){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+    .section{
+        flex-direction: column;
+    }
+    .image{
+        padding-bottom: 1rem;
+    }
+    .info{
+        padding-left: 0;
+    }
+    .info h2{
+        font-size: 1.25rem;
+    }
+    .info p {
+        overflow: scroll;
+    }
+    .mainContent h1{
+        font-size: 1.5rem;
+    }
+    .newsPadding{
+        padding: 0 20px;
+        margin: 0;
+    }
+}
+@media(min-width: 480px) and (max-width: 767px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(5){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+    .section{
+        flex-direction: column;
+    }
+    .image{
+        padding-bottom: 1rem;
+    }
+    .info{
+        padding-left: 0;
+    }
+    .info h2{
+        font-size: 1.25rem;
+    }
+    .info p{
+        overflow: scroll;
+    }
+    .mainContent h1{
+        font-size: 1.5rem;
+    }
+    .newsPadding{
+        padding: 0 25px;
+        margin: 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 990px){
+    #menu .realMenu li:first-child{
+        border-top: none;
+    }
+    #menu .realMenu li:nth-child(5){
+        background: url(../images/menu-bg.png);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: 10px;
+    }
+    #menu .realMenu li a{
+        height: 2rem;
+        line-height: 2rem;
+    }
+    .section{
+        flex-direction: column;
+    }
+    .info{
+        padding-left: 0;
+    }
+    .image{
+        padding-bottom: 1rem;
+    }
+    .newsPadding{
+        padding: 0 30px;
+        margin: 0;
+    }
+}

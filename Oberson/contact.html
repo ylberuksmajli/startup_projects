@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css" type="text/css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="shortcut icon" href="images/title.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact | Oberson Abels</title>
+</head>
+<body id="root">
+    <div id="header">
+        <div id="map"></div>
+        <div class="layer"></div>
+        <div class="containerWrap">
+            <div class="gradientContainer">
+                <img src="images/logo-obersonabels.png" class="headerLogo" id="mainLogo">
+            </div>
+        </div>
+        <div id="navbar">
+            <nav id="menu">
+                <ul class="firstUL p-0">
+                    <ul id="language">
+                        <li id="activeLang"><a href="#">Fr</a></li>
+                        <li id="disabledLang" style="display: none;"><a href="#">Eng</a></li>
+                    </ul>
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+                    <ul class="realMenu" id="realMenu">
+                        <li><a href="home.html">que faisons-nous</a></li>
+                        <li><a href="profils.html">profils</a></li>
+                        <li><a href="publications.html">publications</a></li>
+                        <li><a href="conferences.html">Conférences</a></li>
+                        <li><a href="news.html">news</a></li>
+                        <li><a href="organisation.html">organisation</a></li>
+                        <li><a href="jobs.html">jobs</a></li>
+                        <li><a href="contact.html" class="active">contact</a></li>
+                    </ul>
+                </ul>
+            </nav>
+        </div>
+        <div class="side-Panel" id="Geneve" style="left: -350px;">
+            <div class="side-Panel-Wrap">
+                <div class="side-Panel-Content">
+                    <h4>OA SA&nbsp;GENÈVE</h4>
+                    <p>
+                        Rue De-Candolle 20
+                        <br>
+                        CP&nbsp;225
+                        <br>
+                        CH-1211 Genève 12
+                        <br>
+                        Tél.: +41 58 258 88 88
+                        <br>
+                        Fax: +41 58 258 88 89&nbsp;
+                        <br>
+                        <br>
+                    </p>
+                </div>
+                <div class="side-Panel-Info">
+                    <h4>Parkings:</h4>
+                    <p>
+                        Plaine de Plainpalais (800 places)
+                        <br>
+                        Entrée Avenue du Mail&nbsp;
+                        <br><br>
+                        Uni-Dufour (190 places)
+                        <br>
+                        Entrée Rue Général Dufour&nbsp;
+                    </p>
+                    <h4>Taxi:</h4>
+                    <p>
+                        Tél.: +41 22 331 41 33
+                        <br>
+                        ou +41 22 320 20 20
+                        <br>
+                        ou +41 22 320 22 02&nbsp;
+                    </p>
+                    <h4>Bus:</h4>
+                    <p>
+                        Arrêt Plainpalais (Rond-Point)
+                        <br>
+                        (Depuis l'aéroport, bus 10 jusqu'à la gare. Depuis la gare, tram 15)
+                        <br><br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="overlay"></div>
+        <div class="side-Panel" id="Sion" style="left: -350px;">
+            <div class="side-Panel-Wrap">
+                <div class="side-Panel-Content">
+                    <h4>OA SA Sion</h4>
+                    <p>
+                        Place du Midi 29
+                        <br>
+                        CP 1012
+                        <br>
+                        CH-1951&nbsp;Sion
+                        <br>
+                        Tel.: +41 58 258 86 80&nbsp;
+                        <br>
+                        Fax: +41 58 258 86 89
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="side-Panel" id="Neuchatel" style="left: -350px;">
+            <div class="side-Panel-Wrap">
+                <div class="side-Panel-Content">
+                    <h4>OA SA Neuchâtel</h4>
+                    <p>
+                        Place Pury 3
+                        <br>
+                        CH-2000&nbsp;Neuchâtel
+                        <br>
+                        Tel.: +41 58 258 86 22
+                        <br>
+                        Fax: +41 58 258 86 24
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="side-Panel" id="Lausanne" style="left: -350px;">
+            <div class="side-Panel-Wrap">
+                <div class="side-Panel-Content">
+                    <h4>OA SA Lausanne</h4>
+                    <p>
+                        Avenue de la Gare 12A
+                        <br>
+                        CP 1164
+                        <br>
+                        CH-1001&nbsp;Lausanne
+                        <br>
+                        Tel.: +41 58 258 86 00
+                        <br>
+                        Fax: +41 58 258 86 01
+                    </p>
+                    <p>Parkings visiteurs disponibles dans l'immeuble</p>
+                    <p><a href="#" target="_blank">Télécharger le plan d’accès</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="contactFooter">
+        <div class="footerShowContent" id="footerShowContent">
+            <div class="side-Panel1" id="Geneve1">
+                <div class="side-Panel-Wrap1">
+                    <div class="side-Panel-Content1">
+                        <h4>OA SA&nbsp;GENÈVE</h4>
+                        <p>
+                            Rue De-Candolle 20
+                            <br>
+                            CP&nbsp;225
+                            <br>
+                            CH-1211 Genève 12
+                            <br>
+                            Tél.: +41 58 258 88 88
+                            <br>
+                            Fax: +41 58 258 88 89&nbsp;
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                    <div class="side-Panel-Info1">
+                        <h4>Parkings:</h4>
+                        <p>
+                            Plaine de Plainpalais (800 places)
+                            <br>
+                            Entrée Avenue du Mail&nbsp;
+                            <br><br>
+                            Uni-Dufour (190 places)
+                            <br>
+                            Entrée Rue Général Dufour&nbsp;
+                        </p>
+                        <h4>Taxi:</h4>
+                        <p>
+                            Tél.: +41 22 331 41 33
+                            <br>
+                            ou +41 22 320 20 20
+                            <br>
+                            ou +41 22 320 22 02&nbsp;
+                        </p>
+                        <h4>Bus:</h4>
+                        <p>
+                            Arrêt Plainpalais (Rond-Point)
+                            <br>
+                            (Depuis l'aéroport, bus 10 jusqu'à la gare. Depuis la gare, tram 15)
+                            <br><br><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="side-Panel1" id="Lausanne1">
+                <div class="side-Panel-Wrap1">
+                    <div class="side-Panel-Content1">
+                        <h4>OA SA Lausanne</h4>
+                        <p>
+                            Avenue de la Gare 12A
+                            <br>
+                            CP 1164
+                            <br>
+                            CH-1001&nbsp;Lausanne
+                            <br>
+                            Tel.: +41 58 258 86 00
+                            <br>
+                            Fax: +41 58 258 86 01
+                        </p>
+                        <p>Parkings visiteurs disponibles dans l'immeuble</p>
+                        <p><a href="#" target="_blank">Télécharger le plan d’accès</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="side-Panel1" id="Neuchatel1">
+                <div class="side-Panel-Wrap1">
+                    <div class="side-Panel-Content1">
+                        <h4>OA SA Neuchâtel</h4>
+                        <p>
+                            Place Pury 3
+                            <br>
+                            CH-2000&nbsp;Neuchâtel
+                            <br>
+                            Tel.: +41 58 258 86 22
+                            <br>
+                            Fax: +41 58 258 86 24
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="side-Panel1" id="Sion1">
+                <div class="side-Panel-Wrap1">
+                    <div class="side-Panel-Content1">
+                        <h4>OA SA Sion</h4>
+                        <p>
+                            Place du Midi 29
+                            <br>
+                            CP 1012
+                            <br>
+                            CH-1951&nbsp;Sion
+                            <br>
+                            Tel.: +41 58 258 86 80&nbsp;
+                            <br>
+                            Fax: +41 58 258 86 89
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contactLinks">
+            <div class="social">
+                <a target="_blank" href="https://www.linkedin.com/company/oberson-abels-sa"><img src="images/in.png"
+                        alt="linkedIn"></a>
+                <a href="mailto:info@obersonabels.com"><img src="images/mail.png" alt="linkedIn"></a>
+            </div>
+            <a id="privacy-link"
+                href="http://www.obersonabels.com/2018/GDPR/Privacy%20Policy%20of%20OBERSON%20ABELS%20SA_FR.pdf">Privacy
+                Policy</a>
+        </div>
+    </footer>
+    <!-- AIzaSyBoUNv2CUODxe9z2YibmqwMTWd57BvFagI ---Map Api Key   -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoUNv2CUODxe9z2YibmqwMTWd57BvFagI&callback=initMap&v=weekly"
+        defer></script>
+    <!-- <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyCzedZ957DzXVi7d0p95njvDFbMktz9mXw"></script> -->
+    <script src="js/contact.js"></script>
+</body>
+</html>
