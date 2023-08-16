@@ -1,0 +1,153 @@
+*{  
+    margin:0;
+    padding: 0px;
+}
+.container{
+   
+    color: white;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(133, 219, 176) 0%, rgb(117, 182, 162));
+    font-family: 'Rubik', sans-serif;
+}
+.card{
+    border-radius: 20px;
+    list-style: none;
+    text-align: center;
+    color: #222;
+    padding: 10px;
+    display: grid;
+    height: 300px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(217, 224, 220) 0%, rgb(252, 252, 252));
+    border: 2px solid #4c9c62;
+
+}
+.card:hover{
+    animation: bounce 0.5s linear;
+    cursor: pointer;
+}
+@keyframes bounce {
+    20%{
+        transform: translateY(-6px);
+    }
+    40%{
+        transform: translateY(0px);
+    }
+    60%{
+        transform: translateY(-2px);
+    }
+    80%{
+        transform: translateY(-0px);
+    }
+    
+}
+.card-title{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: normal;
+    color: rgb(110, 97, 97);
+    
+}
+.card-subtitle{
+    
+    text-transform: capitalize;
+    font-weight: lighter;
+    color: #666;
+    margin-top:-2px;
+    
+}
+.card-image{
+    height: 200px;
+    margin:0px auto;
+}
+#pokedex{
+    padding: 77px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    
+}
+.pokecards{
+    padding: 10px;
+    margin: 0px auto;
+}
+#titulli{
+    text-align: center;
+    font-size: 54px;
+    padding-right: 5%;
+    color: white;
+    font-family: 'Koulen', cursive;
+}
+
+.popup{
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#closeBtn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 5px;
+    border:1px  solid silver ;
+
+
+}
+#closeBtn:hover{
+    color: black;
+    transition:300ms;
+    border: 1px solid black;
+    transform: translateY(-1px);
+    transform:translateY(1px);
+    box-shadow: 1px 1px 1px 1px silver;
+    cursor: pointer;
+    
+    
+}
+.searchbar{
+    padding-top: 2%;
+    width:90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    
+}
+
+#butoni{
+    height: 42px;
+    width: 40px;
+    color: grey;
+    border:1px solid black;
+    border-radius:0px 20px 20px 0px;
+    border-left: none;
+}
+#searchField{
+    padding-left: 20px;
+
+    border:1px solid black;
+    width: 200px;
+    height: 40px;
+    border-right: none;
+    border-radius:20px 0px 0px 20px;
+  
+}
+#searchField:focus{
+    outline: none;
+}
+.padingu{
+    display:flex
+
+}
